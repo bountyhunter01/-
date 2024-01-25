@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>확률 계산기</title>
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        <h3>확률 계산기</h3>
+        <hr>
+        <script>
+            var A = prompt("사건 A가 일어날 확률을 입력하세요 " );
+            var B = prompt("사건 B가 일어날 확률을 입력하세요 " );
+
+            if(A == null || B == null) { 
+                document.write("확률 계산을 종료합니다.");
+            } else {
+                
+               Math.floor(A = parseInt(A));
+                Math.floor(B = parseInt(B));
+
+                
+                var comb = A * B;
+
+                
+                document.write("사건 A와 B가 동시에 일어날 확률은 " + "<strong>" + comb + "</strong> 입니다.");
+            }
+        </script>
+    </body>
+</html>
