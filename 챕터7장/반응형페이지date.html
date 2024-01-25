@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>7장을 활용해서 반응형 페이지의 시작</title>
+</head>
+
+<body>
+    <h3>방문 시간이 짝수랑 홀수에 따라 배경 색이 바뀌는 페이지</h3>
+    <hr>
+    <script>
+        var cur = new Date();
+        if (cur.getSeconds() % 2 == 0)
+            document.body.style.backgroundColor = "black";
+           
+       else
+        document.body.style.backgroundColor = "lightskyblue"
+        document.body.style.color = "white";
+
+        document.write("현재 시간: ");
+        document.write(cur.getHours(), "시,");
+        document.write(cur.getMinutes(), "분,");
+        document.write(cur.getSeconds(), "초");
+        //중괄호를 안넣으면 if도 else도 단하나의 조건만 가진다 그래서 컬러가 둘다 생긴것
+    </script>
+</body>
+
+</html>

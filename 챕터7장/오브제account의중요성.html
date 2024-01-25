@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>7장의 막이 내려가다</title>
+    <script>
+        function inquiry() { return this.balance; }//전액조회 함수식
+        function deposit(money) { this.balance += money; }
+        function withdraw(money) {
+            this.balance -= money;
+            return money;
+        }
+
+        const account = new Object();
+        account.owner = "이보겸";
+        account.code = "계좌버노";
+        account.balance = 900;
+        account.inquiry = inquiry;
+        account.deposit = deposit;
+        account.withdraw = withdraw;
+    </script>
+
+</head>
+
+<body>
+    <h3>new object를 이용해보자</h3>
+    <hr>
+    <script>
+        document.write("account: ");
+        document.write(account.owner+ "," );
+        document.write(account.code+ ",");
+        document.write(account.balance+"<br>");
+
+        account.deposit(100);
+        document.write("지금 100원 저금 하면  " + account.inquiry() + "원 줄께 ㅋ" + "<br>");
+        account.deposit(500);
+        document.write("지금 100원 저금 하면  " + account.inquiry() + "원 줄께 ㅋ" + "<br>");
+    </script>
+</body>
+
+</html>

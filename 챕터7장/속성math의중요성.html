@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>7장에서 가장 고전했던 부분을 도와준 친구</title>
+    <script>
+        function randomInt() {
+            return Math.floor(Math.random() * 9) + 1;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>math를 이용해 수학을 해보자</h3>
+    <hr>
+    <script>
+        const ques = randomInt() + "*" + randomInt();//문제부문
+        const user = prompt(ques + "값이 얼만교?", 22);
+        if (user == null) {
+            document.write("그만하는겨?");
+        }
+        else {
+            var ans = eval(ques);
+            if (ans == user)
+                document.write("역시 좀 치네 <br>");
+            else
+                document.write("아니~~그게 아니자나! <br>답은");
+            document.write(ques + "=" + "<strong>" + ans + "</strong>");
+        }
+    </script>
+</body>
+
+</html>

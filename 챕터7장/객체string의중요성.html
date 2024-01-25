@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>7장의 준보스급 함수의 활용</title>
+</head>
+
+<body>
+    <h3>string객체를 자아알 해봐</h3>
+    <hr>
+    <script>
+        const a = new String("남자 and 여자");
+        const b = "!!";
+        document.write("a: " + a + "<br>");
+        document.write("b: " + b + "<br><hr>");
+
+        document.write(a.charAt(0) + "<br>");
+        document.write(a.concat(b, "유") + "<br>");
+        document.write(a.indexOf("a") + "<br>");
+        document.write(a.indexOf("여") + "<br>");
+        document.write(a.slice(1,4) + "<br>");
+        document.write(a.substr(1,3)+ "<br>");
+        document.write(a.toUpperCase() + "<br>");
+        document.write(a.replace("and", "와") + "<br>");
+        document.write("이보겸".trim() + "<br><hr>");
+
+        var sub=a.split(" ");
+        for(var i=0; i<sub.length;i++)
+        document.write("sub"+i+"="+sub[i]+"<br>");
+    </script>
+</body>
+
+</html>
